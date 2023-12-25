@@ -2,12 +2,17 @@ import time
 
 # webdriver это и есть набор команд для управления браузером
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 # импортируем класс By, который позволяет выбрать способ поиска элемента
 from selenium.webdriver.common.by import By
 
 # инициализируем драйвер браузера. После этой команды вы должны увидеть новое открытое окно браузера
-driver = webdriver.Chrome()
+options = Options()
+driver = webdriver.Chrome(options=options)
+
+options.add_argument('--ignore-certificate-errors-spki-list')
+options.add_argument('--ignore-ssl-errors')
 
 # команда time.sleep устанавливает паузу в 5 секунд, чтобы мы успели увидеть, что происходит в браузере
 time.sleep(5)
@@ -41,11 +46,11 @@ driver.quit()
 ВАЖНЫЙ момент - нельзя запускать скрипт, если уже открыт браузер, иначе он просто его откроет и ничего делать не будет. 
 Закрываем браузер, запускаем скрипт - все ок. Как открывать в новой вкладке запущенного браузера я разбираться не стал. 
 В связи со всем вышесказанным, рабочий код будет выглядеть так: """
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+""" from selenium import webdriver
+from selenium.webdriver.chrome.options import Options """
 
 
-def main():
+""" def main():
     zapustis_ti_uje_nakonec()
 
 
@@ -62,4 +67,4 @@ def zapustis_ti_uje_nakonec():
 
 
 if __name__ == '__main__':
-    main()
+    main() """
