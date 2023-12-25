@@ -1,0 +1,32 @@
+Создадим папку, где будут храниться наши виртуальные окружения, и перейдем в неё:
+mkdir environments
+cd environments
+
+Создадим виртуальное окружение:
+python -m venv selenium_env
+
+Запустим созданный для нас приложением venv файл activate.bat, чтобы активировать окружение:
+environments\selenium_env\Scripts\activate.bat
+
+Если понадобится выйти из нашего окружения, достаточно выполнить команду deactivate:
+environments\selenium_env\Scripts\deactivate.bat
+
+chromedriver:
+Чтобы завершить процесс в консоли, нажмите Ctrl+C. 
+
+python c:\Users\Сне\selenium_course\first_script.py
+copy C:\Users\Сне\Downloads\first_script.py c:\Users\Сне\selenium_course
+
+Для Selenium 4.1:
+
+from selenium.webdriver.support.select import Select
+
+Дальше в курсе по тому же принципу:
+
+для Selenium 4.1 вместо
+
+from selenium.webdriver.support.ui import WebDriverWait
+
+нужно
+
+from selenium.webdriver.support.wait import WebDriverWait

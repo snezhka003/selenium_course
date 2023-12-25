@@ -17,6 +17,8 @@ file_path = os.path.join(current_dir, 'file.txt')
 browser.find_element(By.ID, "file").send_keys(file_path)
 
 browser.find_element(By.CSS_SELECTOR, "button.btn").click()
+print(os.path.abspath(__file__))
+print(os.path.abspath(os.path.dirname(__file__)))
 
 time.sleep(10)
 

@@ -1,6 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-""" import time """
+import time
 import math
 
 def calc(x):
@@ -17,6 +17,6 @@ browser.find_element(By.ID, "answer").send_keys(calc(x))
 browser.find_element(By.CSS_SELECTOR, "button.btn").click()
 print(browser.switch_to.alert.text) # выведет в консоль текст из "победного" алерта
 
-""" time.sleep(10) """
+time.sleep(10)
 
 browser.quit()
