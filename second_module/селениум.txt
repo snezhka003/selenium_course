@@ -30,3 +30,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 нужно
 
 from selenium.webdriver.support.wait import WebDriverWait
+
+
+А для VSC ещё круче оказалось поставить плагины:
+
+- Python Test Explorer for Visual Studio Code
+- Test Explorer UI
+Никаких заморочек с запуском Pytest, и визуализация результатов тестов на порядок выше, чем чтение текста, хоть и цветного, в терминале. 
+Только, чтобы плагины работали корректно, все файлы с тестами нужно называть, начиная с test.
