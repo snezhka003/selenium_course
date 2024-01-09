@@ -1,17 +1,18 @@
 import pytest
-from selenium import webdriver
+""" убираем после внедрения conftest.py
+from selenium import webdriver """
 from selenium.webdriver.common.by import By
 
 link = "http://selenium1py.pythonanywhere.com/"
 
-
+""" убираем после внедрения conftest.py
 @pytest.fixture(scope="function")
 def browser():
     print("\nstart browser for test..")
     browser = webdriver.Chrome()
     yield browser
     print("\nquit browser..")
-    browser.quit()
+    browser.quit() """
 
 
 class TestMainPage1:
